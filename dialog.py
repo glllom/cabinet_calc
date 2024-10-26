@@ -18,6 +18,7 @@ class BoxesWindow(tk.Toplevel):
         self.cmb_box = ttk.Combobox(self, values=box_options)
         self.cmb_box.pack(fill=tk.NONE, expand=False, side=tk.LEFT, anchor=tk.NW)
         self.cmb_quantity = ttk.Combobox(self, values=['1', '2', '3', '4', '5'])
+        self.cmb_quantity.current(0)
         self.cmb_quantity.pack(fill=tk.NONE, expand=False, side=tk.LEFT, anchor=tk.NW)
 
         self.button = ttk.Button(self, text="Cancel", command=self.close)
@@ -26,3 +27,7 @@ class BoxesWindow(tk.Toplevel):
     def close(self):
         self.grab_release()
         self.destroy()
+
+    def add_box(self):
+
+        self.close()
