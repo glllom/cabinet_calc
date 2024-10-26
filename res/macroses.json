@@ -1,0 +1,20 @@
+{
+  "shelf": {
+    "symmetric": "True",
+    "coordinates": [
+      "45, 32",
+      "45, 0",
+      "45, -32",
+      "X-45, -32",
+      "X-45, 0",
+      "X-45, 32"
+    ]
+  },
+  "box_blum": {
+    "symmetric": "False",
+        "coordinates": [
+      "60, 37",
+      "60, 165"
+    ]
+  }
+}
