@@ -4,12 +4,6 @@
     "thickness": "",
     "elements": [
         {
-            "type": "box",
-            "name": "DTC",
-            "width": "400",
-            "height": "300"
-        },
-        {
             "type": "Compartment",
             "door": false,
             "shelves": 2,
@@ -19,13 +13,13 @@
             "type": "box",
             "name": "Blum",
             "width": "550",
-            "height": "250"
+            "height": "300"
         },
         {
             "type": "box",
             "name": "Blum",
             "width": "550",
-            "height": "250"
+            "height": "300"
         }
     ]
 }
