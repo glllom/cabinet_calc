@@ -32,13 +32,12 @@ class DimFrame(ttk.Frame):
         print("shelf added")
 
     def add_boxes(self):
-        box_window = BoxesWindow()
+        box_window = BoxesWindow(self, self.parent.redraw_list, elements=self.parent.content['elements'])
+        # print(f"data={box_window}")
+        # self.parent.redraw_list()
+        print("box added2")
+
         box_window.grab_set()
+        print("box added3")
 
-
-class BoxFrame(ttk.Frame):
-    def __init__(self, parent, *args, **kwargs):
-        ttk.Frame.__init__(self, parent, *args, **kwargs)
-        self.parent = parent
-        self.parent.geometry("100x500")
 

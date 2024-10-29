@@ -2,14 +2,5 @@
     "height": "",
     "top_panel": "1",
     "bottom_panel": "1",
-    "elements": [
-        {
-            "name": "shelves",
-            "quantity": "1"
-        },
-        {
-            "name": "shelves",
-            "quantity": "3"
-        }
-    ]
+    "elements": []
 }
