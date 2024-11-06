@@ -79,6 +79,7 @@ class EntryDigits(ttk.Entry):
             print("not good")
             return False
         print("good")
+        return True
 
     def on_invalid(self):
         pass
