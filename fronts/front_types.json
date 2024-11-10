@@ -7,12 +7,12 @@
         "tool": "03",
         "offsets": [
           {
-            "corners": "yes",
+            "corners": "1",
             "offset": 60,
             "depth": 2
           },
           {
-            "corners": "yes",
+            "corners": "1",
             "offset": 72,
             "depth": 2
           }
@@ -28,12 +28,12 @@
         "tool": "03",
         "offsets": [
           {
-            "corners": "yes",
+            "corners": "2",
             "offset": 60,
             "depth": 2
           },
           {
-            "corners": "no",
+            "corners": "0",
             "offset": 75,
             "depth": 2
           }
@@ -43,12 +43,87 @@
         "tool": "05",
         "offsets": [
           {
-            "corners": "no",
+            "corners": "0",
             "offset": 66.4,
             "depth": 2,
             "r_thickness": 2.25
+          },
+          {
+            "corners": "0",
+            "offset": 68.65,
+            "depth": 2
           }
         ]
+      }
+    ]
+  },
+  "N03":  {
+    "name": "panel",
+    "description": "complex old panel simulation",
+    "rectangles": [
+      {
+        "tool": "03",
+        "offsets": [
+          {
+            "corners": "3",
+            "offset": 60,
+            "depth": 4
+          },
+          {
+            "corners": "3",
+            "offset": 67,
+            "depth": 9
+          },
+          {
+            "corners": "0",
+            "offset": 101,
+            "depth": 2
+          }
+        ]
+      },
+      {
+        "tool": "01",
+        "offsets": [
+          {
+            "corners": "0",
+            "offset": 63,
+            "depth": 4
+          },
+          {
+            "corners": "0",
+            "offset": 70,
+            "depth": 9
+          },
+          {
+            "corners": "0",
+            "offset": 72.5,
+            "depth": 9
+          },
+          {
+            "corners": "0",
+            "offset": 75,
+            "depth": 9
+          },
+          {
+            "corners": "0",
+            "offset": 77,
+            "depth": 9
+          },
+          {
+            "corners": "0",
+            "offset": 97,
+            "depth": 2
+          }
+        ]
+      },
+      {
+        "tool": "05",
+        "offsets": [
+          {
+            "corners": "0",
+            "offset": 77,
+            "depth": 9
+          }]
       }
     ]
   }

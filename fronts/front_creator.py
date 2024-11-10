@@ -9,8 +9,8 @@ with open("tools.json", "r") as f:
 main_width = 340
 main_height = 400
 panel_thickness = 19
-_type = "N01"
-_order = "example_N01"
+_type = "N02"
+_order = "example_N02"
 
 start_code = ["G00G21G17G90G40G49G80", "G71G91.1"]
 processes = {}
@@ -35,28 +35,40 @@ def create_folder(name):
 def make_rectangle(width, height, thickness, rect, feed=3000):
     offset = rect['offset']
     depth = rect['depth']
-    corners = rect['corners']
+    corners = int(rect['corners'])
     r_code = [
         f"G00 X{width - offset} Y{height - offset}F{feed}",
         f"G01 Z{thickness}F{feed}",
         f"G01 Y{height - offset - 50} Z{thickness - depth}",
         f"G01 Y{offset}",
     ]
-    if corners == "yes":
-        r_code.append(f"G01 X{width - offset + depth} Y{offset - depth} Z{thickness}")
+    if corners > 0:  # corner 1
+        r_code.append(f"G01 X{width - (offset - depth)} Y{offset - depth} Z{thickness}")
         r_code.append(f"G01 X{width - offset} Y{offset} Z{thickness - depth}")
+        if corners == 2:
+            r_code.append(f"G01 X{width - (offset+3)} Y{offset+3}")
+            r_code.append(f"G01 X{width - offset} Y{offset}")
     r_code.append(f"G01 X{offset}")
-    if corners == "yes":
+    if corners > 0:  # corner 2
         r_code.append(f"G01 X{offset - depth} Y{offset - depth} Z{thickness}")
-        r_code.append(f"G01 X{width} Y{offset} Z{thickness - depth}")
+        r_code.append(f"G01 X{offset} Y{offset} Z{thickness - depth}")
+        if corners == 2:
+            r_code.append(f"G01 X{offset+3} Y{offset+3}")
+            r_code.append(f"G01 X{offset} Y{offset}")
     r_code.append(f"G01 Y{height - offset}")
-    if corners == "yes":
-        r_code.append(f"G01 X{width - depth} Y{height - offset + depth} Z{thickness}")
-        r_code.append(f"G01 X{width} Y{height - offset} Z{thickness - depth}")
+    if corners > 0:  # corner 3
+        r_code.append(f"G01 X{offset - depth} Y{height - (offset - depth)} Z{thickness}")
+        r_code.append(f"G01 X{offset} Y{height - offset} Z{thickness - depth}")
+        if corners == 2:
+            r_code.append(f"G01 X{offset+3} Y{height - (offset+3)}")
+            r_code.append(f"G01 X{offset} Y{height - offset}")
     r_code.append(f"G01 X{width - offset}")
-    if corners == "yes":
-        r_code.append(f"G01 X{width - offset + depth} Y{height - offset + depth} Z{thickness}")
+    if corners > 0:  # corner 3
+        r_code.append(f"G01 X{width - (offset - depth)} Y{height - (offset - depth)} Z{thickness}")
         r_code.append(f"G01 X{width - offset} Y{height - offset} Z{thickness - depth}")
+        if corners == 2:
+            r_code.append(f"G01 X{width - (offset+3)} Y{height - (offset+3)}")
+            r_code.append(f"G01 X{width - offset} Y{height - offset}")
     r_code.append(f"G01 Y{height - offset - 50}")
     r_code.append(f"G00 Z{thickness + 20}")
 
@@ -84,7 +96,8 @@ for tool_set in processes:
 
     with open(file_name, "w+") as f:
         for rectangle in tool_set["offsets"]:
-            print(rectangle)
+            if 'r_thickness' in rectangle:
+                print(rectangle)
             code.extend(make_rectangle(main_width, main_height, panel_thickness, rectangle, feed=current_tool['feed']))
             # print(rectangle)
         f.write(finalize_code())
