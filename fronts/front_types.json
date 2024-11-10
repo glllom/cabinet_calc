@@ -1,0 +1,70 @@
+{
+  "N01": {
+    "name": "basic",
+    "description": "one rectangle ball head",
+    "rectangles": [
+      {
+        "tool": "01",
+        "corners": "yes",
+        "offsets": [
+          [
+            60,
+            10
+          ],
+          [
+            80,
+            5
+          ]
+        ]
+      },
+      {
+        "tool": "03",
+        "corners": "no",
+        "offsets": [
+          [
+            75,
+            2
+          ],
+          [
+            85,
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "N02": {
+    "name": "basic2",
+    "description": "two rectangles ball head",
+    "rectangles": [
+      {
+        "tool": "01",
+        "corners": "yes",
+        "offsets": [
+          [
+            70,
+            2
+          ],
+          [
+            80,
+            5
+          ]
+        ]
+      },
+      {
+        "tool": "03",
+        "corners": "no",
+        "offsets": [
+          [
+            75,
+            2
+          ],
+          [
+            85,
+            5
+          ]
+        ]
+      }
+    ]
+  }
+}

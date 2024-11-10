@@ -1,0 +1,37 @@
+{
+  "01": {
+    "name": "str_6",
+    "diameter": 6,
+    "rpm": 16000,
+    "feed": 3000,
+    "start_z": 1000
+  },
+  "02": {
+    "name": "drill_5",
+    "diameter": 5,
+    "rpm": 2400,
+    "feed": 3000,
+    "start_z": 1000
+  },
+  "03": {
+    "name": "v_bit",
+    "diameter": 0.2,
+    "rpm": 16000,
+    "feed": 3000,
+    "start_z": 1000
+  },
+  "04": {
+    "name": "str_12.7",
+    "diameter": 12.7,
+    "rpm": 16000,
+    "feed": 3000,
+    "start_z": 1000
+  },
+  "05": {
+    "name": "ball_50",
+    "diameter": 50,
+    "rpm": 14000,
+    "feed": 2000,
+    "start_z": 1000
+  }
+}
