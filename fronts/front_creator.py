@@ -9,8 +9,8 @@ with open("tools.json", "r") as f:
 main_width = 340
 main_height = 400
 panel_thickness = 19
-_type = "N02"
-_order = "example_N02"
+_type = "N03"
+_order = "example_N03"
 
 start_code = ["G00G21G17G90G40G49G80", "G71G91.1"]
 processes = {}

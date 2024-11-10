@@ -76,7 +76,7 @@
           },
           {
             "corners": "0",
-            "offset": 101,
+            "offset": 99,
             "depth": 2
           }
         ]
@@ -106,12 +106,7 @@
           },
           {
             "corners": "0",
-            "offset": 77,
-            "depth": 9
-          },
-          {
-            "corners": "0",
-            "offset": 97,
+            "offset": 96,
             "depth": 2
           }
         ]
@@ -121,7 +116,7 @@
         "offsets": [
           {
             "corners": "0",
-            "offset": 77,
+            "offset": 78,
             "depth": 9
           }]
       }
