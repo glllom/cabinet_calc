@@ -15,7 +15,7 @@
   },
   "03": {
     "name": "v_bit",
-    "diameter": 0.2,
+    "diameter": 0.1,
     "rpm": 16000,
     "feed": 3000,
     "start_z": 1000
@@ -32,6 +32,13 @@
     "diameter": 50,
     "rpm": 14000,
     "feed": 2000,
+    "start_z": 1000
+  },
+  "06": {
+    "name": "ball_9",
+    "diameter": 9,
+    "rpm": 16000,
+    "feed": 3000,
     "start_z": 1000
   }
 }

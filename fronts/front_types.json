@@ -1,68 +1,53 @@
 {
   "N01": {
     "name": "basic",
-    "description": "one rectangle ball head",
+    "description": "two rectangles V-head",
     "rectangles": [
       {
-        "tool": "01",
-        "corners": "yes",
-        "offsets": [
-          [
-            60,
-            10
-          ],
-          [
-            80,
-            5
-          ]
-        ]
-      },
-      {
         "tool": "03",
-        "corners": "no",
         "offsets": [
-          [
-            75,
-            2
-          ],
-          [
-            85,
-            5
-          ]
+          {
+            "corners": "yes",
+            "offset": 60,
+            "depth": 2
+          },
+          {
+            "corners": "yes",
+            "offset": 72,
+            "depth": 2
+          }
         ]
       }
     ]
   },
   "N02": {
     "name": "basic2",
-    "description": "two rectangles ball head",
+    "description": "one rectangle 12mm with corners",
     "rectangles": [
       {
-        "tool": "01",
-        "corners": "yes",
+        "tool": "03",
         "offsets": [
-          [
-            70,
-            2
-          ],
-          [
-            80,
-            5
-          ]
+          {
+            "corners": "yes",
+            "offset": 60,
+            "depth": 2
+          },
+          {
+            "corners": "no",
+            "offset": 75,
+            "depth": 2
+          }
         ]
       },
       {
-        "tool": "03",
-        "corners": "no",
+        "tool": "05",
         "offsets": [
-          [
-            75,
-            2
-          ],
-          [
-            85,
-            5
-          ]
+          {
+            "corners": "no",
+            "offset": 66.4,
+            "depth": 2,
+            "r_thickness": 2.25
+          }
         ]
       }
     ]
