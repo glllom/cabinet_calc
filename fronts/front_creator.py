@@ -1,19 +1,23 @@
 import json
 import os
 
-JOB = "C:\\Users\\glebo\\PycharmProjects\\donkey\\app\\product"
+JOB = "C:\\Users\\Gleb\\PycharmProjects\\donkey\\app\\product"
 with open("tools.json", "r") as f:
     tools = json.load(f)
     f.close()
 
-main_width = 340
-main_height = 400
-panel_thickness = 19
-_type = "N03"
-_order = "example_N03"
+main_width = 250
+main_height = 350
+panel_thickness = 18.5
+_type = "N02"
+_order = "example_N02"
 
 start_code = ["G00G21G17G90G40G49G80", "G71G91.1"]
 processes = {}
+
+
+def g1(x, y, z):  # Returns regular g-code G01
+    return f"G01 {'X' + x if x else ''}{'Y' + y if y else ''}{'Z' + z if z else ''}"
 
 
 def finalize_code():
@@ -46,28 +50,28 @@ def make_rectangle(width, height, thickness, rect, feed=3000):
         r_code.append(f"G01 X{width - (offset - depth)} Y{offset - depth} Z{thickness}")
         r_code.append(f"G01 X{width - offset} Y{offset} Z{thickness - depth}")
         if corners == 2:
-            r_code.append(f"G01 X{width - (offset+3)} Y{offset+3}")
+            r_code.append(f"G01 X{width - (offset + 3)} Y{offset + 3}")
             r_code.append(f"G01 X{width - offset} Y{offset}")
     r_code.append(f"G01 X{offset}")
     if corners > 0:  # corner 2
         r_code.append(f"G01 X{offset - depth} Y{offset - depth} Z{thickness}")
         r_code.append(f"G01 X{offset} Y{offset} Z{thickness - depth}")
         if corners == 2:
-            r_code.append(f"G01 X{offset+3} Y{offset+3}")
+            r_code.append(f"G01 X{offset + 3} Y{offset + 3}")
             r_code.append(f"G01 X{offset} Y{offset}")
     r_code.append(f"G01 Y{height - offset}")
     if corners > 0:  # corner 3
         r_code.append(f"G01 X{offset - depth} Y{height - (offset - depth)} Z{thickness}")
         r_code.append(f"G01 X{offset} Y{height - offset} Z{thickness - depth}")
         if corners == 2:
-            r_code.append(f"G01 X{offset+3} Y{height - (offset+3)}")
+            r_code.append(f"G01 X{offset + 3} Y{height - (offset + 3)}")
             r_code.append(f"G01 X{offset} Y{height - offset}")
     r_code.append(f"G01 X{width - offset}")
     if corners > 0:  # corner 3
         r_code.append(f"G01 X{width - (offset - depth)} Y{height - (offset - depth)} Z{thickness}")
         r_code.append(f"G01 X{width - offset} Y{height - offset} Z{thickness - depth}")
         if corners == 2:
-            r_code.append(f"G01 X{width - (offset+3)} Y{height - (offset+3)}")
+            r_code.append(f"G01 X{width - (offset + 3)} Y{height - (offset + 3)}")
             r_code.append(f"G01 X{width - offset} Y{height - offset}")
     r_code.append(f"G01 Y{height - offset - 50}")
     r_code.append(f"G00 Z{thickness + 20}")

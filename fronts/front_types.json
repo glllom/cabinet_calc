@@ -40,17 +40,27 @@
         ]
       },
       {
-        "tool": "05",
+        "tool": "01",
         "offsets": [
           {
             "corners": "0",
-            "offset": 66.4,
+            "offset": 63,
             "depth": 2,
             "r_thickness": 2.25
           },
           {
             "corners": "0",
-            "offset": 68.65,
+            "offset": 66,
+            "depth": 2
+          },
+          {
+            "corners": "0",
+            "offset": 69,
+            "depth": 2
+          },
+          {
+            "corners": "0",
+            "offset": 72,
             "depth": 2
           }
         ]
