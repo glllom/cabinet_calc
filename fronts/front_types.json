@@ -67,6 +67,27 @@
       }
     ]
   },
+  "N01u": {
+    "name": "basic",
+    "description": "two rectangles ball-head",
+    "rectangles": [
+      {
+        "tool": "07",
+        "offsets": [
+          {
+            "corners": "0",
+            "offset": 60,
+            "depth": 2
+          },
+          {
+            "corners": "0",
+            "offset": 72,
+            "depth": 2
+          }
+        ]
+      }
+    ]
+  },
   "N03":  {
     "name": "panel",
     "description": "complex old panel simulation",
@@ -129,6 +150,44 @@
             "offset": 78,
             "depth": 9
           }]
+      }
+    ]
+  },
+  "N04":  {
+    "name": "immersed",
+    "description": "complex old panel simulation",
+    "rectangles": [
+      {
+        "tool": "03",
+        "offsets": [
+          {
+            "corners": "1",
+            "offset": 60,
+            "depth": 4
+          },
+          {
+            "corners": "0",
+            "offset": 61,
+            "depth": 4
+          },
+          {
+            "corners": "0",
+            "offset": 62,
+            "depth": 4
+          }
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "tool": "04",
+        "offsets": [
+          {
+            "corners": "0",
+            "offset": 60.5,
+            "depth": 4
+          }
+        ]
       }
     ]
   }

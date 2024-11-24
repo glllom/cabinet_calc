@@ -6,11 +6,11 @@ with open("tools.json", "r") as f:
     tools = json.load(f)
     f.close()
 
-main_width = 250
-main_height = 350
-panel_thickness = 18.5
-_type = "N02"
-_order = "example_N02"
+main_width = 300
+main_height = 342
+panel_thickness = 18.8
+_type = "N01u"
+_order = "example_N01u"
 
 start_code = ["G00G21G17G90G40G49G80", "G71G91.1"]
 processes = {}
@@ -77,6 +77,11 @@ def make_rectangle(width, height, thickness, rect, feed=3000):
     r_code.append(f"G00 Z{thickness + 20}")
 
     return r_code
+
+
+def make_panel(width, height, thickness, panel, feed=3000):
+    offset = panel['offset']
+    depth = panel['depth']
 
 
 with open("front_types.json", "r") as f:
